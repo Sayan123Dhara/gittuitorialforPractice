@@ -1,2 +1,2 @@
-This is my 1st file in the git tuitorial ..
+This is my last file in the git tuitorial ..
 It's time to modify it
