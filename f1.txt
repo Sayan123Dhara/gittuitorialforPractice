@@ -1,3 +1,2 @@
-This is my 1st file in the git tuitorial ..
-It's time to modify it..
-A new day..
+This is my last file in the git tuitorial ..
+It's time to modify it
