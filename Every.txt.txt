@@ -217,3 +217,65 @@ Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
 $ git branch
   developer
 * master
+
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git log --oneline
+c37f971 (HEAD -> master) Deleting good.txt
+35d07a2 Done some changes
+dd4d2b7 (origin/master) Merge branch 'developer'
+44c87d6 (developer) add new.txt file
+601a48a folder deleted
+c2b3556 merge successful
+2d70a91 modify f1.txt
+c3db434 create good.txt
+7ec230f modify f1.txt
+1c25811 different branch
+9343824 adding all code in allcode.txt
+e59568c Introducing gitignored
+e7d83d2 f2 file commited
+afdff15 modifing f1.txt and creating f2.txt
+6b12375 first commit on f1.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git log --oneline -1
+c37f971 (HEAD -> master) Deleting good.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git log --oneline --author="sayan"
+c37f971 (HEAD -> master) Deleting good.txt
+35d07a2 Done some changes
+dd4d2b7 (origin/master) Merge branch 'developer'
+44c87d6 (developer) add new.txt file
+601a48a folder deleted
+c2b3556 merge successful
+2d70a91 modify f1.txt
+c3db434 create good.txt
+7ec230f modify f1.txt
+1c25811 different branch
+9343824 adding all code in allcode.txt
+e59568c Introducing gitignored
+e7d83d2 f2 file commited
+afdff15 modifing f1.txt and creating f2.txt
+6b12375 first commit on f1.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git log --oneline --decorate --graph
+* c37f971 (HEAD -> master) Deleting good.txt
+* 35d07a2 Done some changes
+*   dd4d2b7 (origin/master) Merge branch 'developer'
+|\
+| * 44c87d6 (developer) add new.txt file
+* | 601a48a folder deleted
+* | c2b3556 merge successful
+|\|
+| * 2d70a91 modify f1.txt
+| * c3db434 create good.txt
+| * 1c25811 different branch
+* | 7ec230f modify f1.txt
+|/
+* 9343824 adding all code in allcode.txt
+* e59568c Introducing gitignored
+* e7d83d2 f2 file commited
+* afdff15 modifing f1.txt and creating f2.txt
+* 6b12375 first commit on f1.txt
