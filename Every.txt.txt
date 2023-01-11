@@ -1,0 +1,219 @@
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git config user.name
+sayan
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git config user.email
+Sayandhara23@gmail.com
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git config core.editor
+notepad
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git branch
+  developer
+* master
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ pwd
+/c/Users/Sayan Dhara/Git
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ ls
+allcode.txt  f1.txt  f2.txt  f3.txt  gitignore  good.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git checkout developer
+Switched to branch 'developer'
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ ls
+allcode.txt  developer/  f1.txt  f2.txt  f3.txt  gitignore  good.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ touch new
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ git status
+On branch developer
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ git add new
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ git status
+On branch developer
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new
+
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ git commit -m "add new.txt file"
+[developer 44c87d6] add new.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ git log
+commit 44c87d605d37cafb43146ce90cff07c00516b35b (HEAD -> developer)
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Wed Jan 11 10:02:40 2023 +0530
+
+    add new.txt file
+
+commit 2d70a915a4604c0cd54ba27cb9493503d8309ff0
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:23:22 2023 +0530
+
+    modify f1.txt
+
+commit c3db434f559e9604a2bfb40fa5233bead99fe183
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:22:46 2023 +0530
+
+    create good.txt
+
+commit 1c2581181006d9b1d6b32fe1b36ab8620cae68e8
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Thu Jan 5 09:37:44 2023 +0530
+
+    different branch
+
+commit 93438245367135913f6e9984ef7cc1e6df50cf0e
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Thu Jan 5 09:17:17 2023 +0530
+
+    adding all code in allcode.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ ls
+allcode.txt  developer/  f1.txt  f2.txt  f3.txt  gitignore  good.txt  new
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (developer)
+$ git checkout master
+Switched to branch 'master'
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ ls
+allcode.txt  f1.txt  f2.txt  f3.txt  gitignore  good.txt
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git log
+commit 601a48adf3f1ddb8e4e94ff5e37fd8e0b27bf5cc (HEAD -> master, origin/master)
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Wed Jan 11 09:40:03 2023 +0530
+
+    folder deleted
+
+commit c2b3556552585dfcbdede5b5bd45e908685998c4
+Merge: 7ec230f 2d70a91
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:25:10 2023 +0530
+
+    merge successful
+
+commit 2d70a915a4604c0cd54ba27cb9493503d8309ff0
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:23:22 2023 +0530
+
+    modify f1.txt
+
+commit c3db434f559e9604a2bfb40fa5233bead99fe183
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:22:46 2023 +0530
+
+    create good.txt
+
+commit 7ec230f4228b5e3ff61e675a819986c5f5c185ad
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:21:34 2023 +0530
+
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git merge developer
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/Sayan Dhara/Git/.git/MERGE_MSG to DOS format...
+dos2unix: converting file C:/Users/Sayan Dhara/Git/.git/MERGE_MSG to Unix format...
+Merge made by the 'ort' strategy.
+ new | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git log
+commit dd4d2b7509044e63fae5d7c1ec337d9c54179c40 (HEAD -> master)
+Merge: 601a48a 44c87d6
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Wed Jan 11 10:03:46 2023 +0530
+
+    Merge branch 'developer'
+
+commit 44c87d605d37cafb43146ce90cff07c00516b35b (developer)
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Wed Jan 11 10:02:40 2023 +0530
+
+    add new.txt file
+
+commit 601a48adf3f1ddb8e4e94ff5e37fd8e0b27bf5cc (origin/master)
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Wed Jan 11 09:40:03 2023 +0530
+
+    folder deleted
+
+commit c2b3556552585dfcbdede5b5bd45e908685998c4
+Merge: 7ec230f 2d70a91
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:25:10 2023 +0530
+
+    merge successful
+
+commit 2d70a915a4604c0cd54ba27cb9493503d8309ff0
+Author: sayan <Sayandhara23@gmail.com>
+Date:   Tue Jan 10 10:23:22 2023 +0530
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ ls
+allcode.txt  f1.txt  f2.txt  f3.txt  gitignore  good.txt  new
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git branch
+  developer
+* master
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git push origin -f master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 506 bytes | 506.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Sayan123Dhara/gittuitorialforPractice.git
+   601a48a..dd4d2b7  master -> master
+
+Sayan Dhara@DESKTOP-L7CSC3N MINGW64 ~/Git (master)
+$ git branch
+  developer
+* master
